@@ -17,32 +17,6 @@ URL: http://dzignine.com
 ------------------------------------------------------*/
 
 /*------------------------------------------------------
-Variable @ Template Designer
---------------------------------------------------------
-<Variable name="keycolor" description="Main Color" type="color" default="#66bbdd" value="#000000"/>
-
-<Variable name="body.background" description="Body Background" type="background"
-          color="transparent" default="$(color) none repeat scroll top left" value="$(color) url(http://2.bp.blogspot.com/-sq1QdTtdh0A/Uqk_XslsMrI/AAAAAAAADrY/3e2nap_7KMM/s0/P1090259_mini.jpg) repeat fixed top center"/>
-
-<Group description="Body" selector="body">
-    <Variable name="body.font" description="Font" type="font"
-              default="normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif"
-              value="normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif"/>
-    <Variable name="body.text.color" description="Text Color" type="color" default="#444" value="#444444"/>
-    <Variable name="body.link.color" description="Link Color" type="color" default="#000" value="#000000"/>
-    <Variable name="link.hover.color" description="Link-hover Color" type="color" default="#db2727" value="#db2727"/>
-</Group>
-
-<Group description="Heading" selector=".post h2, .widget h3">
-    <Variable name="global.heading.font" description="Title Font" type="font"
-              default="normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Georgia, serif"
-              value="normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Georgia, serif"/>
-    <Variable name="heading.color" description="Title Color" type="color" default="#222222" value="#222222"/>
-</Group>
-------------------------------------------------------*/
-
-
-/*------------------------------------------------------
 1. Reset CSS
 ------------------------------------------------------*/
 body, html  { height: 100%}
@@ -75,9 +49,9 @@ table { border-collapse: collapse; border-spacing: 0}
 2. Global
 ------------------------------------------------------*/
 body {
-font: $(body.font);
-background: $(body.background);
-color: $(body.text.color);
+font: normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif;
+background: #fff url(http://2.bp.blogspot.com/-sq1QdTtdh0A/Uqk_XslsMrI/AAAAAAAADrY/3e2nap_7KMM/s0/P1090259_mini.jpg) no-repeat fixed top center;
+color: #444;
 }
 .header-wrapper,
 .content-wrapper,
@@ -92,13 +66,13 @@ margin: 0 auto;
 
 /* -- 2.1. General -- */
 a {
-color: $(body.link.color);
+color: #000;
 }
 a:visited {
 color: #333;
 }
 a:hover {
-color: $(link.hover.color);
+color: #db2727;
 }
 .left {
 float:left
@@ -114,7 +88,7 @@ clear:both
 }
 .button {
 text-transform: uppercase;
-font: $(body.font);
+font: normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif;
 font-size: 14px;
 font-weight: bold;
 padding: 10px 20px;
@@ -147,7 +121,7 @@ code {
 font:1em/1.2em 'courier new', courier, monospace;
 }
 h1, h2, h3, h4, h5 {
-font: $(global.heading.font);
+font: normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Georgia, serif;
 }
 
 
@@ -173,7 +147,7 @@ border-right: 1px solid #ddd;
 float: left;
 }
 #logos h1 {
-font: $(body.font);
+font: normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif;
 font-weight: bold;
 font-size: 18px;
 line-height: 1em;
@@ -375,7 +349,7 @@ width: 678px;
 }
 .comments h4 {
 clear: both;
-font: $(body.font);
+font: normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif;
 font-size: 16px;
 font-weight: bold;
 margin-bottom: 20px;
@@ -427,13 +401,13 @@ padding: 20px 0;
 text-align: center;
 }
 .sidebar .widget h2 {
-font: $(body.font);
+font: normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif;
 font-weight: bold;
 font-size: 15px;
 text-transform: uppercase;
 }
 .sidebar blockquote {
-font: $(global.heading.font);
+font: normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Georgia, serif;
 font-size: 30px;
 line-height: 1.4em;
 }
@@ -515,7 +489,7 @@ height: 384px;
 padding: 70px 0;
 }
 .slider blockquote {
-font: $(global.heading.font);
+font: normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Georgia, serif;
 font-size: 47px;
 line-height: 1.4em;
 }
@@ -541,7 +515,7 @@ color: #fff;
 
 /* -- Tagline -- */
 .tagline {
-font: $(global.heading.font);
+font: normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Georgia, serif;
 font-size: 18px;
 line-height: 1.7em;
 padding: 40px 0;
