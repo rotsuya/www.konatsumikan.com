@@ -6,7 +6,6 @@
 <meta charset='utf-8'/>
 <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
 <b:include data='blog' name='all-head-content'/>
-<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic|Lato:400,400italic,700' rel='stylesheet'/>
 <title><data:blog.pageTitle/></title>
 <b:skin><![CDATA[/*
 --------------------------------------------------------
@@ -27,8 +26,8 @@ Variable @ Template Designer
 
 <Group description="Body" selector="body">
     <Variable name="body.font" description="Font" type="font"
-              default="normal normal 15px/1.8em Lato, 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif"
-              value="normal normal 15px/1.8em Lato, 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif"/>
+              default="normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif"
+              value="normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif"/>
     <Variable name="body.text.color" description="Text Color" type="color" default="#444" value="#444444"/>
     <Variable name="body.link.color" description="Link Color" type="color" default="#000" value="#000000"/>
     <Variable name="link.hover.color" description="Link-hover Color" type="color" default="#db2727" value="#db2727"/>
@@ -36,8 +35,8 @@ Variable @ Template Designer
 
 <Group description="Heading" selector=".post h2, .widget h3">
     <Variable name="global.heading.font" description="Title Font" type="font"
-              default="normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Playfair Display', Georgia, serif"
-              value="normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', 'Playfair Display', Georgia, serif"/>
+              default="normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Georgia, serif"
+              value="normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Georgia, serif"/>
     <Variable name="heading.color" description="Title Color" type="color" default="#222222" value="#222222"/>
 </Group>
 ------------------------------------------------------*/
@@ -601,16 +600,11 @@ text-transform: uppercase;
 text-decoration: none;
 }
 
-
-
 ]]></b:skin>
 
-
-
 <!-- = / jQuery /= -->
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'/>
-<script src='http://i-biyan.com/js/html5.js'/>
-
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+<!--[if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
 
 <!-- = / Trigger / = -->
 <script>
@@ -630,13 +624,6 @@ text-decoration: none;
     jQuery(document).ready(function($) {
         // Set equal height
         setEqualHeight($(&quot;.home-entry-title&quot;));
-
-        // Thumbnail:hover
-        $(&quot;.thumbs&quot;).hover(function(){
-            $(this).find(&quot;.onhover&quot;).animate({ opacity: &quot;show&quot; }, 300 );
-    }, function(){
-        $(this).find(&quot;.onhover&quot;).animate({ opacity: &quot;hide&quot; }, 300 );
-    });
     });
 </script>
 
@@ -672,7 +659,7 @@ text-decoration: none;
             .post-outer .date-header {
                 font-size: 10px;
                 text-transform: uppercase;
-                color: #aaa
+                color: #aaa;
             }
             .post-outer .thumbs {
                 height: 238px;
@@ -683,32 +670,17 @@ text-decoration: none;
                 background-image: url(http://lh6.googleusercontent.com/-T-F4mgNy-L0/UqmOMR7z6SI/AAAAAAAADr0/hFPsITVRp-Y/s800/Checker-16x16.png);
             }
             .post-outer .thumbs img {
+                -webkit-transition: opacity 0.2s linear 0;
+                -moz-transition: opacity 0.2s linear 0;
+                transition: opacity 0.2s linear 0;
+            }
+            .post-outer:hover .thumbs img {
+                -webkit-opacity: 0.6;
+                -moz-opacity: 0.6;
+                opacity: 0.6;
             }
             .post-outer .thumbs img.yimg {
                 margin-top: -15px;
-            }
-            .post-outer .thumbs .onhover {
-                position: absolute;
-                z-index: 8;
-                width: 238px;
-                height: 238px;
-                top: 0;
-                left: 0;
-                display: none;
-                background: url(http://1.bp.blogspot.com/-GWXu8a22pPQ/Uph6LAqE-xI/AAAAAAAACmI/xA77TFWn3Qs/s1600/bg_thumbnail-hover.png);
-                color: #fff;
-            }
-            .onhover span {
-                position: absolute;
-                z-index: 9;
-                top: 50%;
-                left: 50%;
-                margin: -10px 0 0 -10px;
-                text-indent: -900px;
-                display: block;
-                width: 20px;
-                height: 20px;
-                background: url(http://2.bp.blogspot.com/-FjRil1NfQzk/UpiA-jmX1eI/AAAAAAAACmY/Br02mZ98J_o/s1600/icon_eye.png);
             }
         </style>
     </b:if>
@@ -722,11 +694,7 @@ text-decoration: none;
     </style>
 </b:if>
 
-
-
 </head>
-
-
 
 <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
 <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
@@ -1635,7 +1603,6 @@ text-decoration: none;
                                 <script type='text/javascript'>
                                     document.write(bp_thumbnail_resize(&quot;<data:post.thumbnailUrl/>&quot;,&quot;<data:post.title/>&quot;));
                                 </script></a>
-                            <a expr:href='data:post.url'><div class='onhover'><span>Read More</span></div></a>
                         </div><!-- ### akhir .thumbs, sesuatu -->
                     </b:if>
                 </b:if>
@@ -2216,19 +2183,25 @@ text-decoration: none;
     js.src = &quot;//connect.facebook.net/ja_JP/all.js#xfbml=1&amp;appId=346525292047360&quot;;
     fjs.parentNode.insertBefore(js, fjs);
 }(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));</script>
-<script>
-    (function() {
-        $('.date-header').each(function() {
-            var self = $(this);
-            if (!self.text().match(/.+年.+月.+日/)) {
-                self.html('-');
-            }
-            if (!self.prev().hasClass('thumbs')) {
-                self.before('&lt;div class=&quot;thumbs blank&quot;&gt;&lt;/div&gt;');
-            };
-        });
-    })();
-</script>
+
+<b:if cond='data:blog.pageType != &quot;item&quot;'>
+    <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+        <script>
+            (function() {
+                $('.date-header').each(function() {
+                    var self = $(this);
+                    if (!self.text().match(/.+年.+月.+日/)) {
+                        self.html('-');
+                    }
+                    if (!self.prev().hasClass('thumbs')) {
+                        self.before('&lt;div class=&quot;thumbs blank&quot;&gt;&lt;/div&gt;');
+                    };
+                });
+            })();
+        </script>
+    </b:if>
+</b:if>
+
 </body>
 
 </html>
