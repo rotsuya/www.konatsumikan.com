@@ -48,16 +48,36 @@ table { border-collapse: collapse; border-spacing: 0}
 /*------------------------------------------------------
 2. Global
 ------------------------------------------------------*/
+
 body {
 font: normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif;
-background: #fff url(http://2.bp.blogspot.com/-sq1QdTtdh0A/Uqk_XslsMrI/AAAAAAAADrY/3e2nap_7KMM/s0/P1090259_mini.jpg) no-repeat fixed top center;
+background: #fff url(http://lh5.googleusercontent.com/-jGD_Qa5IagM/UqqsYwh_CcI/AAAAAAAADsQ/77tZzRrs0FM/s768/P1090259_768.jpg) no-repeat fixed top left;
 color: #444;
 }
+@media screen and (min-width: 600px) {
+body {
+background: #fff url(http://lh5.googleusercontent.com/-jGD_Qa5IagM/UqqsYwh_CcI/AAAAAAAADsQ/77tZzRrs0FM/s768/P1090259_768.jpg) no-repeat fixed top center;
+}
+}
+@media screen and (min-width: 768px) {
+body {
+background: #fff url(http://lh6.googleusercontent.com/-8blFSSgdBcU/UqqsYxkU6mI/AAAAAAAADsc/4-oETZ97PK8/s1280/P1090259_1280.jpg) no-repeat fixed top center;
+}
+}
+@media screen and (min-width: 1280px) {
+body {
+background: #fff url(http://lh4.googleusercontent.com/-Ddi63VH0HI8/UqqsYwm-iWI/AAAAAAAADsY/_P-p-g32kV8/s1920/P1090259_1920.jpg) no-repeat fixed top center;
+}
+}
+
 .header-wrapper,
 .content-wrapper,
 .sidebar-bottom,
 .credit {
 background: #fff;
+}
+.outer-wrapper {
+min-width: 960px;
 }
 .blox {
 width: 960px;
@@ -485,6 +505,14 @@ margin: 0 auto;
 color: #fff;
 height: 384px;
 }
+.slider .divider {
+background: #fff;
+}
+.slider .divider .blox {
+height: 3px;
+margin: 0 auto;
+background: url(http://lh6.googleusercontent.com/-AhX04Wg2gXE/UqrKDE7X9_I/AAAAAAAADtA/sTBOJIMJXNI/s1600/border_double.png) repeat-x left bottom;
+}
 .slider .widget {
 padding: 70px 0;
 }
@@ -689,7 +717,7 @@ text-decoration: none;
             gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
             if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
             gapi.iframes.getContext().openChild({
-            url: &#39;https://draft.blogger.com/navbar.g?targetBlogID\0756609687206095579519\46blogName\75%E5%B0%8F%E5%A4%8F%E3%81%BF%E3%81%8B%E3%82%93stg\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75DISABLED\46layoutType\75LAYOUTS\46searchRoot\75http://stage.konatsumikan.com/search\46blogLocale\75ja\46v\0752\46homepageUrl\75http://stage.konatsumikan.com/\46vt\0751864455550847271034&#39;,
+            url: &#39;http://draft.blogger.com/navbar.g?targetBlogID\0756609687206095579519\46blogName\75%E5%B0%8F%E5%A4%8F%E3%81%BF%E3%81%8B%E3%82%93stg\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75DISABLED\46layoutType\75LAYOUTS\46searchRoot\75http://stage.konatsumikan.com/search\46blogLocale\75ja\46v\0752\46homepageUrl\75http://stage.konatsumikan.com/\46vt\0751864455550847271034&#39;,
             where: document.getElementById(&quot;navbar-iframe-container&quot;),
             id: &quot;navbar-iframe&quot;
             });
