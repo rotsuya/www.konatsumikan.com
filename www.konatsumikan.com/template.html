@@ -19,7 +19,7 @@ URL: http://dzignine.com
 /*------------------------------------------------------
 1. Reset CSS
 ------------------------------------------------------*/
-body, html  { height: 100%}
+body, html { height: 100%}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -29,12 +29,12 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-margin: 0;
-padding: 0;
-border: 0;
-outline: 0;
-font-size: 100%;
-vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 body { line-height: 1}
 ol, ul { list-style: none}
@@ -50,24 +50,17 @@ table { border-collapse: collapse; border-spacing: 0}
 ------------------------------------------------------*/
 
 body {
-font: normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif;
-background: #fff url(http://lh5.googleusercontent.com/-jGD_Qa5IagM/UqqsYwh_CcI/AAAAAAAADsQ/77tZzRrs0FM/s768/P1090259_768.jpg) no-repeat fixed top left;
-color: #444;
+    font: normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif;
+    background: #fff;
+    color: #444;
+    -webkit-text-size-adjust: 100%;
 }
-@media screen and (min-width: 600px) {
-body {
-background: #fff url(http://lh5.googleusercontent.com/-jGD_Qa5IagM/UqqsYwh_CcI/AAAAAAAADsQ/77tZzRrs0FM/s768/P1090259_768.jpg) no-repeat fixed top center;
-}
-}
-@media screen and (min-width: 768px) {
-body {
-background: #fff url(http://lh6.googleusercontent.com/-8blFSSgdBcU/UqqsYxkU6mI/AAAAAAAADsc/4-oETZ97PK8/s1280/P1090259_1280.jpg) no-repeat fixed top center;
-}
-}
-@media screen and (min-width: 1280px) {
-body {
-background: #fff url(http://lh4.googleusercontent.com/-Ddi63VH0HI8/UqqsYwm-iWI/AAAAAAAADsY/_P-p-g32kV8/s1920/P1090259_1920.jpg) no-repeat fixed top center;
-}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -100;
 }
 
 .header-wrapper,
@@ -77,12 +70,38 @@ background: #fff url(http://lh4.googleusercontent.com/-Ddi63VH0HI8/UqqsYwm-iWI/A
 background: #fff;
 }
 .outer-wrapper {
-min-width: 960px;
+    min-width: 240px;
 }
 .blox {
-width: 960px;
-margin: 0 auto;
+    width: 240px;
+    margin: 0 auto;
+    position: relative;
 }
+@media screen and (min-width: 480px) {
+    .outer-wrapper {
+        min-width: 480px;
+    }
+    .blox {
+        width: 480px;
+    }
+}
+@media screen and (min-width: 720px) {
+    .outer-wrapper {
+        min-width: 720px;
+    }
+    .blox {
+        width: 720px;
+    }
+}
+@media screen and (min-width: 960px) {
+    .outer-wrapper {
+        min-width: 960px;
+    }
+    .blox {
+        width: 960px;
+    }
+}
+
 
 /* -- 2.1. General -- */
 a {
@@ -150,21 +169,35 @@ font: normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', '
 ------------------------------------------------------*/
 .header-wrapper {
 clear: both;
-padding: 40px 0;
+padding: 26px 0;
+}
+@media screen and (min-width: 480px) {
+    .header-wrapper {
+        padding: 40px 0;
+    }
 }
 
 /* -- Logo & Navigation -- */
 #logos {
 float: left;
-width: 70%;
 }
 #logos .header {
-width: auto;
-min-width: 164px;
-padding: 5px 40px 5px 0;
-margin-right: 40px;
-border-right: 1px solid #ddd;
-float: left;
+    white-space: nowrap;
+    padding: 5px 40px 5px 0;
+    margin-right: 40px;
+    border-right: 1px solid #ddd;
+    float: left;
+    max-width: 240px;
+}
+@media screen and (min-width: 480px) {
+    #logos .header {
+        max-width: 135px;
+    }
+}
+@media screen and (min-width: 720px) {
+    #logos .header {
+        max-width: none;
+    }
 }
 #logos h1 {
 font: normal normal 15px/1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ ,Meiryo, sans-serif;
@@ -173,19 +206,50 @@ font-size: 18px;
 line-height: 1em;
 text-transform: uppercase;
 }
+#logos h1 a {
+    text-decoration: none;
+}
+.descriptionwrapper {
+    display: none;
+}
 #logos .navigation {
-width: auto;
-min-width: 400px;
-float: left;
+    float: left;
+    max-width: 240px;
+}
+@media screen and (min-width: 480px) {
+    #logos .navigation {
+        max-width: 264px;
+    }
+}
+@media screen and (min-width: 720px) {
+    #logos .navigation {
+        max-width: none;
+    }
 }
 
 /* -- Navigation -- */
 .navigation h2 {
 display: none;
 }
+.navigation ul {
+    white-space: nowrap;
+    line-height: 28px;
+    height: 28px;
+}
 .navigation ul li {
-float: left;
-margin-right: 30px;
+    display: inline;
+    margin-right: 1em;
+}
+.navigation ul li:last-child {
+    margin-right: 0;
+}
+@media screen and (min-width: 480px) {
+    .navigation ul li {
+        margin-right: 2em;
+    }
+    .navigation ul li:last-child {
+        margin-right: 0;
+    }
 }
 .navigation ul li a {
 text-transform: uppercase;
@@ -196,8 +260,15 @@ color: #aaa;
 
 /* -- Social Buttons -- */
 #socialbuttons {
-float: right;
-width: 30%;
+display: none;
+}
+@media screen and (min-width: 720px) {
+    #socialbuttons {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 }
 #socialbuttons .widget {
 text-align: right;
@@ -247,11 +318,27 @@ padding: 40px 0;
 .post-outer {
 }
 .post-outer .post-body {
-float: right;
-width: 678px;
-margin: 0 1px;
-padding-left: 40px;
+    width: 240px;
 }
+@media screen and (min-width: 480px) {
+    .post-outer .post-body {
+        width: 480px;
+    }
+}
+@media screen and (min-width: 720px) {
+    .post-outer .post-body {
+        float: right;
+        width: 438px;
+        margin: 0 1px;
+        padding-left: 40px;
+    }
+}
+@media screen and (min-width: 960px) {
+    .post-outer .post-body {
+        width: 678px;
+    }
+}
+
 .post-body img {
 max-width: 100%;
 height: auto;
@@ -326,9 +413,19 @@ list-style-type: decimal;
 
 /* -- Post header -- */
 .post-outer .post-header {
-float: left;
-width: 238px;
-margin: 0 1px;
+    width: 240px;
+}
+@media screen and (min-width: 480px) {
+    .post-outer .post-header {
+        width: 480px;
+    }
+}
+@media screen and (min-width: 720px) {
+    .post-outer .post-header {
+        float: left;
+        width: 238px;
+        margin: 0 1px;
+    }
 }
 .post-header li {
 padding: 15px 0;
@@ -339,6 +436,10 @@ font-weight: bold;
 font-size: 11px;
 line-height: 1.4em;
 }
+.post-header li span.fn, .post-header li span.fn span {
+font-size: inherit;
+font-weight: normal;
+}
 
 /* -- Blog pager -- */
 .feed-links,
@@ -346,7 +447,6 @@ line-height: 1.4em;
 display: none;
 }
 #blog-pager {
-width: 960px;
 }
 #blog-pager span a {
 display: block;
@@ -364,8 +464,25 @@ color: #444;
 margin-top: 40px;
 padding-top: 40px;
 background: url(http://4.bp.blogspot.com/-MSQ3_YBbIZc/UpfzHe_qtBI/AAAAAAAACk4/hLZ_9pnSP5M/s1600/border-triplet.png) repeat-x left top;
-float: right;
-width: 678px;
+width: 240px;
+}
+@media screen and (min-width: 480px) {
+    .byncomments {
+        width: 480px;
+    }
+}
+@media screen and (min-width: 720px) {
+    .byncomments {
+        float: right;
+        width: 438px;
+        margin: 0 1px;
+        padding-left: 40px;
+    }
+}
+@media screen and (min-width: 960px) {
+    .byncomments {
+        width: 678px;
+    }
 }
 .comments h4 {
 clear: both;
@@ -443,13 +560,49 @@ padding: 20px 0;
 background: url(http://1.bp.blogspot.com/-KVvUg3qkyWU/UpiWKTzf_-I/AAAAAAAACm8/gTnXjQbbCE4/s1600/border_double.png) repeat-x left top;
 }
 .sidebar-bottom .sidebar {
-float: left;
-width: 320px;
+    width: 240px;
 }
-.sidebar-bottom .sidebar#grid2 {
-width: 280px;
-margin-left: 20px;
-margin-right: 20px;
+@media screen and (min-width: 480px) {
+    .sidebar-bottom .sidebar#grid1 {
+        width: 220px;
+        float: left;
+    }
+    .sidebar-bottom .sidebar#grid2 {
+        width: 220px;
+        margin-left: 40px;
+        float: left;
+    }
+    .sidebar-bottom .sidebar#grid3 {
+        clear: both;
+        width: 480px;
+    }
+}
+@media screen and (min-width: 720px) {
+    .sidebar-bottom .sidebar#grid1 {
+        width: 200px;
+    }
+    .sidebar-bottom .sidebar#grid2 {
+        width: 200px;
+        margin-left: 40px;
+        margin-right: 40px;
+        float: left;
+    }
+    .sidebar-bottom .sidebar#grid3 {
+        float: left;
+        clear: none;
+        width: 240px;
+    }
+}
+@media screen and (min-width: 960px) {
+    .sidebar-bottom .sidebar#grid1 {
+        width: 320px;
+    }
+    .sidebar-bottom .sidebar#grid2 {
+        width: 280px;
+    }
+    .sidebar-bottom .sidebar#grid3 {
+        width: 320px;
+    }
 }
 .sidebar-bottom .widget h2 {
 margin-bottom: 20px;
@@ -464,6 +617,9 @@ text-align:inherit !important;
 }
 .BlogArchive #ArchiveList ul li {
 margin: 0 !important;
+}
+.blog-list-container a {
+text-decoration: underline !important;
 }
 .blog-list-container .blog-content {
 float: inherit !important;
@@ -500,7 +656,6 @@ white-space: nowrap;
 
 /* -- Slider -- */
 .slider .flexslider {
-width: 960px;
 margin: 0 auto;
 color: #fff;
 height: 384px;
@@ -517,17 +672,27 @@ background: url(http://lh6.googleusercontent.com/-AhX04Wg2gXE/UqrKDE7X9_I/AAAAAA
 padding: 70px 0;
 }
 .slider blockquote {
-font: normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Georgia, serif;
-font-size: 47px;
-line-height: 1.4em;
+    font: normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Georgia, serif;
+    font-size: 40px;
+    line-height: 160px;
 }
 .slider blockquote cite {
-clear: both;
-display: block;
-font-size: 24px;
-margin-top: 20px;
-line-height: 1.4em;
-font-style: normal;
+    clear: both;
+    display: block;
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 64px;
+    font-style: normal;
+}
+@media screen and (min-width: 480px) {
+    .slider blockquote {
+        font-size: 48px;
+        line-height: 150px;
+    }
+    .slider blockquote cite {
+        font-size: 24px;
+        line-height: 74px;
+    }
 }
 .slider .button {
 color: #fff;
@@ -623,7 +788,7 @@ text-decoration: none;
         columns.height(tallestcolumn);
     }
 
-    jQuery(document).ready(function($) {
+    $(document).ready(function($) {
         // Set equal height
         setEqualHeight($(&quot;.home-entry-title&quot;));
     });
@@ -634,6 +799,29 @@ text-decoration: none;
 <b:if cond='data:blog.pageType != &quot;item&quot;'>
     <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
         <style>
+            #background {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                background: url(http://lh5.googleusercontent.com/-jGD_Qa5IagM/UqqsYwh_CcI/AAAAAAAADsQ/77tZzRrs0FM/s768/P1090259_768.jpg) no-repeat top center;
+                z-index: -100;
+            }
+            @media screen and (min-width: 600px) {
+                #background {
+                    background-image: url(http://lh5.googleusercontent.com/-jGD_Qa5IagM/UqqsYwh_CcI/AAAAAAAADsQ/77tZzRrs0FM/s768/P1090259_768.jpg);
+                }
+            }
+            @media screen and (min-width: 768px) {
+                #background {
+                    background-image: url(http://lh6.googleusercontent.com/-8blFSSgdBcU/UqqsYxkU6mI/AAAAAAAADsc/4-oETZ97PK8/s1280/P1090259_1280.jpg);
+                }
+            }
+            @media screen and (min-width: 1280px) {
+                #background {
+                    background-image: url(http://lh4.googleusercontent.com/-Ddi63VH0HI8/UqqsYwm-iWI/AAAAAAAADsY/_P-p-g32kV8/s1920/P1090259_1920.jpg);
+                }
+            }
+
             .post-outer {
                 float: left;
                 width: 238px;
@@ -695,10 +883,11 @@ text-decoration: none;
         }
     </style>
 </b:if>
-
+<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
 </head>
 
 <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
+<div id='background'></div>
 <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
     <b:widget id='Navbar1' locked='true' title='Navbar' type='Navbar'>
         <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
@@ -769,7 +958,13 @@ text-decoration: none;
                                         <b:include name='description'/>
                                     </div>
                                     <b:else/>
-                                    <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                        + &quot;background-position: &quot;                        + data:backgroundPositionStyleStr + &quot;; &quot;                        + data:widthStyleStr                        + &quot;min-height: &quot; + data:height                        + &quot;_height: &quot; + data:height                        + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
+                                    <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;
+                                                            + &quot;background-position: &quot;
+                                                            + data:backgroundPositionStyleStr + &quot;; &quot;
+                                                            + data:widthStyleStr
+                                                            + &quot;min-height: &quot; + data:height
+                                                            + &quot;_height: &quot; + data:height
+                                                            + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
                                         <div class='titlewrapper' style='background: transparent'>
                                             <h1 class='title' style='background: transparent; border-width: 0px'>
                                                 <b:include name='title'/>
@@ -966,8 +1161,8 @@ text-decoration: none;
         <b:include name='feedLinks'/>
 
         <b:if cond='data:top.showStars'>
-            <script src='//www.google.com/jsapi' type='text/javascript'/>
-            <script type='text/javascript'>
+            <script src='//www.google.com/jsapi'/>
+            <script>
                 google.load(&quot;annotations&quot;, &quot;1&quot;, {&quot;locale&quot;: &quot;<data:top.languageCode/>&quot;});
                 function initialize() {
                     google.annotations.setApplicationId(<data:top.blogspotReviews/>);
@@ -1039,7 +1234,7 @@ text-decoration: none;
         </b:if>
         <data:post.friendConnectJs/>
         <data:post.cmtfpIframe/>
-        <script type='text/javascript'>
+        <script>
             BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
         </script>
     </div>
@@ -1227,7 +1422,7 @@ text-decoration: none;
 <b:includable id='iframe_comments' var='post'>
 
     <b:if cond='data:post.allowIframeComments'>
-        <script expr:src='data:post.iframeCommentSrc' type='text/javascript'/>
+        <script expr:src='data:post.iframeCommentSrc'/>
         <div class='cmt_iframe_holder' expr:data-href='data:post.canonicalUrl' expr:data-viewtype='data:post.viewType'/>
 
         <b:if cond='data:post.embedCommentForm == &quot;false&quot;'>
@@ -1582,7 +1777,7 @@ text-decoration: none;
                     <b:if cond='data:post.thumbnailUrl'>
                         <div class='thumbs'>
                             <a expr:href='data:post.url'>
-                                <script type='text/javascript'>
+                                <script>
                                     //<![CDATA[
                                     function bp_thumbnail_resize(image_url,post_title) {
                                         var image_size=238;
@@ -1602,7 +1797,7 @@ text-decoration: none;
                                     }
                                     //]]>
                                 </script>
-                                <script type='text/javascript'>
+                                <script>
                                     document.write(bp_thumbnail_resize(&quot;<data:post.thumbnailUrl/>&quot;,&quot;<data:post.title/>&quot;));
                                 </script></a>
                         </div><!-- ### akhir .thumbs, sesuatu -->
@@ -1690,7 +1885,7 @@ text-decoration: none;
         </b:if>
         <data:post.friendConnectJs/>
         <data:post.cmtfpIframe/>
-        <script type='text/javascript'>
+        <script>
             BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
         </script>
     </div>
@@ -1698,7 +1893,7 @@ text-decoration: none;
 <b:includable id='threaded_comment_js' var='post'>
     <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
 
-    <script type='text/javascript'>
+    <script>
         (function() {
             var items = <data:post.commentJso/>;
             var msgs = <data:post.commentMsgs/>;
@@ -2177,29 +2372,39 @@ text-decoration: none;
 </div>
 
 <div id='fb-root'/>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?&#39;http&#39;:&#39;https&#39;;if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+&#39;://platform.twitter.com/widgets.js&#39;;fjs.parentNode.insertBefore(js,fjs);}}(document, &#39;script&#39;, &#39;twitter-wjs&#39;);</script>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = &quot;//connect.facebook.net/ja_JP/all.js#xfbml=1&amp;appId=346525292047360&quot;;
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));</script>
-
+<script>
+    //<![CDATA[
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document, "script", "twitter-wjs");
+    //]]>
+</script>
+<script>
+    //<![CDATA[
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = '//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=346525292047360';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    //]]>
+</script>
 <b:if cond='data:blog.pageType != &quot;item&quot;'>
     <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
         <script>
+            //<![CDATA[
             (function() {
-                $('.date-header').each(function() {
-                    var self = $(this);
+                var $dateHeaders = $('.date-header');
+                for (var i = 0, length = $dateHeaders.length; i < length; i++) {
+                    var self = $dateHeaders.eq(i);
                     if (!self.text().match(/.+年.+月.+日/)) {
-                        self.html('-');
+                        self.html($dateHeaders.eq(i - 1).text());
                     }
                     if (!self.prev().hasClass('thumbs')) {
-                        self.before('&lt;div class=&quot;thumbs blank&quot;&gt;&lt;/div&gt;');
+                        self.before('<div class="thumbs blank"></div>');
                     };
-                });
+                }
             })();
+            //]]>
         </script>
     </b:if>
 </b:if>
