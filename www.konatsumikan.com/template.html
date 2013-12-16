@@ -447,6 +447,19 @@ font-weight: normal;
 display: none;
 }
 #blog-pager {
+    margin-top: 40px;
+}
+@media screen and (min-width: 720px) {
+    #blog-pager {
+        width: 438px;
+        float: right
+    }
+}
+@media screen and (min-width: 960px) {
+    #blog-pager {
+        width: 678px;
+        float: right
+    }
 }
 #blog-pager span a {
 display: block;
@@ -475,8 +488,6 @@ width: 240px;
     .byncomments {
         float: right;
         width: 438px;
-        margin: 0 1px;
-        padding-left: 40px;
     }
 }
 @media screen and (min-width: 960px) {
@@ -595,7 +606,7 @@ background: url(http://1.bp.blogspot.com/-KVvUg3qkyWU/UpiWKTzf_-I/AAAAAAAACm8/gT
 }
 @media screen and (min-width: 960px) {
     .sidebar-bottom .sidebar#grid1 {
-        width: 320px;
+        width: 280px;
     }
     .sidebar-bottom .sidebar#grid2 {
         width: 280px;
@@ -656,10 +667,26 @@ white-space: nowrap;
 
 /* -- Slider -- */
 .slider .flexslider {
-margin: 0 auto;
-color: #fff;
-height: 384px;
+    position: relative;
+    margin: 0 auto;
+    color: #fff;
+    height: 132px;
 }
+@media screen and (min-width: 480px) {
+    .slider .flexslider {
+        margin: 0 auto;
+        color: #fff;
+        height: 252px;
+    }
+}
+@media screen and (min-width: 720px) {
+    .slider .flexslider {
+        margin: 0 auto;
+        color: #fff;
+        height: 372px;
+    }
+}
+
 .slider .divider {
 background: #fff;
 }
@@ -669,29 +696,43 @@ margin: 0 auto;
 background: url(http://lh6.googleusercontent.com/-AhX04Wg2gXE/UqrKDE7X9_I/AAAAAAAADtA/sTBOJIMJXNI/s1600/border_double.png) repeat-x left bottom;
 }
 .slider .widget {
-padding: 70px 0;
 }
 .slider blockquote {
     font: normal normal 18px 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', Georgia, serif;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
     font-size: 40px;
-    line-height: 160px;
+    line-height: 60px;
+    text-shadow: 0 0 2px black;
 }
 .slider blockquote cite {
     clear: both;
     display: block;
     font-size: 16px;
-    margin-top: 20px;
-    line-height: 64px;
+    line-height: 24px;
     font-style: normal;
 }
 @media screen and (min-width: 480px) {
     .slider blockquote {
+        bottom: 30px;
         font-size: 48px;
-        line-height: 150px;
+        line-height: 72px;
     }
     .slider blockquote cite {
         font-size: 24px;
-        line-height: 74px;
+        line-height:36px;
+    }
+}
+@media screen and (min-width: 720px) {
+    .slider blockquote {
+        bottom: 80px;
+        font-size: 48px;
+        line-height: 72px;
+    }
+    .slider blockquote cite {
+        font-size: 24px;
+        line-height: 36px;
     }
 }
 .slider .button {
@@ -803,22 +844,32 @@ text-decoration: none;
                 width: 100%;
                 height: 100%;
                 position: fixed;
-                background: url(http://lh5.googleusercontent.com/-jGD_Qa5IagM/UqqsYwh_CcI/AAAAAAAADsQ/77tZzRrs0FM/s768/P1090259_768.jpg) no-repeat top center;
+                background: url(http://lh5.googleusercontent.com/-LTbqjbVhfIs/Uq8G9sa_aeI/AAAAAAAADt0/16iTwDt7Lwo/s320/P1010757%2540320.jpg) no-repeat top center;
                 z-index: -100;
             }
-            @media screen and (min-width: 600px) {
+            @media screen and (min-width: 321px) and (max-width: 479px) {
                 #background {
-                    background-image: url(http://lh5.googleusercontent.com/-jGD_Qa5IagM/UqqsYwh_CcI/AAAAAAAADsQ/77tZzRrs0FM/s768/P1090259_768.jpg);
+                    background-image: url(http://lh5.googleusercontent.com/--u1A1pfrSc8/Uq8G_Jj9QVI/AAAAAAAADuM/oA2cuJ1irX0/s480/P1010757%2540480.jpg);
                 }
             }
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 480px) and (max-width: 719px) {
                 #background {
-                    background-image: url(http://lh6.googleusercontent.com/-8blFSSgdBcU/UqqsYxkU6mI/AAAAAAAADsc/4-oETZ97PK8/s1280/P1090259_1280.jpg);
+                    background-image: url(http://lh6.googleusercontent.com/-WbdEnR53vR8/Uq8G-hFQxXI/AAAAAAAADuA/NYnc0x0CH1U/s720/P1010757%2540720.jpg);
+                }
+            }
+            @media screen and (min-width: 720px) and (max-width: 959px) {
+                #background {
+                    background-image: url(http://lh6.googleusercontent.com/-mScpKwL-xAc/Uq8G_PciJ0I/AAAAAAAADuI/4_H_m-IXbXw/s960/P1010757%2540960.jpg);
+                }
+            }
+            @media screen and (min-width: 960px) and (max-width: 1279px) {
+                #background {
+                    background-image: url(http://lh4.googleusercontent.com/-CX3piL2kAqw/Uq8G9vryceI/AAAAAAAADuE/8V9PBkyl-WM/s1280/P1010757%25401280.jpg);
                 }
             }
             @media screen and (min-width: 1280px) {
                 #background {
-                    background-image: url(http://lh4.googleusercontent.com/-Ddi63VH0HI8/UqqsYwm-iWI/AAAAAAAADsY/_P-p-g32kV8/s1920/P1090259_1920.jpg);
+                    background-image: url(http://lh6.googleusercontent.com/-zOJPwzDUlEc/Uq8G9slE0-I/AAAAAAAADuo/Fki1hiI7iNs/s1920/P1010757%25401920.jpg);
                 }
             }
 
@@ -2411,4 +2462,4 @@ text-decoration: none;
 
 </body>
 
-</html>
+</html> 
