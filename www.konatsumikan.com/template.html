@@ -621,6 +621,9 @@ text-align:inherit !important;
 .BlogArchive #ArchiveList ul li {
 margin: 0 !important;
 }
+.blog-list-container ul {
+margin-top: -2px;
+}
 .blog-list-container a {
 text-decoration: underline !important;
 }
@@ -632,17 +635,17 @@ padding: 4px 0 5px;
 text-indent: inherit !important;
 }
 .blog-list-container .blog-title {
-line-height: 1.2em !important;
+line-height: 22px !important;
 margin: 0 !important;
-height: 18px;
+height: 22px;
 overflow: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
 }
 .blog-list-container .item-content {
 font-size: inherit !important;
-line-height: 1.2em !important;
-height: 36px;
+line-height: 22pxem !important;
+height: 44px;
 overflow: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
@@ -650,8 +653,8 @@ white-space: nowrap;
 .blog-list-container .item-time {
 font-size: inherit !important;
 font-style: inherit !important;
-line-height: 1.2em !important;
-height: 18px;
+line-height: 22px !important;
+height: 22px;
 overflow: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
@@ -947,6 +950,26 @@ text-decoration: none;
     </style>
 </b:if>
 <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<meta content='chrome=1' http-equiv='X-UA-Compatible'/>
+<meta expr:content='data:blog.pageTitle' property='og:title'/>
+<meta expr:content='data:blog.title' property='og:site_name'/>
+<meta content='1053812108' property='fb:admins'/>
+<meta content='346525292047360' property='fb:app_id'/>
+<b:if cond='data:blog.pageType != &quot;item&quot;'>
+    <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+        <meta content='blog' property='og:type'/>
+        <meta expr:content='data:blog.homepageUrl' property='og:url'/>
+        <meta property="og:image" content="http://lh3.googleusercontent.com/-dLZBVd8a8SE/UrBJ6v_07KI/AAAAAAAADu0/wMW_S1FOweg/s1600/P1010757%2540ogp.jpg" />
+    </b:if>
+</b:if>
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+    <meta content='article' property='og:type'/>
+    <meta expr:content='data:blog.url' property='og:url'/>
+</b:if>
+<b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+    <meta content='article' property='og:type'/>
+    <meta expr:content='data:blog.url' property='og:url'/>
+</b:if>
 </head>
 
 <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
