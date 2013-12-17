@@ -262,14 +262,6 @@ color: #aaa;
 #socialbuttons {
 display: none;
 }
-@media screen and (min-width: 720px) {
-    #socialbuttons {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-}
 #socialbuttons .widget {
 text-align: right;
 }
@@ -777,6 +769,11 @@ padding: 20px 0;
 text-align: center;
 }
 
+/* -- Social Buttons -- */
+.credit .widget.HTML {
+display: none;
+}
+
 /* -- Credit -- */
 .credit .social-networks {
 text-align: center;
@@ -922,6 +919,21 @@ text-decoration: none;
             }
             .post-outer .thumbs img.yimg {
                 margin-top: -15px;
+            }
+
+            /* -- Social Buttons -- */
+            @media screen and (min-width: 720px) {
+                #socialbuttons {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+
+            /* -- Social Buttons -- */
+            .credit .widget.HTML {
+                display: block;
             }
         </style>
     </b:if>
@@ -1801,12 +1813,11 @@ text-decoration: none;
                     <b:if cond='data:post.emailPostUrl'>
                         <li class='post-icons'>
                             <!-- email post links -->
-              <span class='item-action'>
-                <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg'>
-                    <img alt='' class='icon-action' height='13' src='http://img1.blogblog.com/img/icon18_email.gif' width='18'/>
-                </a>
-              </span>
-
+                            <span class='item-action'>
+                                <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg'>
+                                    <img alt='' class='icon-action' height='13' src='http://img1.blogblog.com/img/icon18_email.gif' width='18'/>
+                                </a>
+                            </span>
                             <!-- quickedit pencil -->
                             <b:include data='post' name='postQuickEdit'/>
                         </li>
@@ -1815,6 +1826,14 @@ text-decoration: none;
                     <b:if cond='data:post.sharePostUrl'>
                         <li class='post-share-buttons goog-inline-block'>
                             <b:include data='post' name='shareButtons'/>
+                        </li>
+                    </b:if>
+
+                    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                        <li class='post-social-buttons'>
+                            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a><br />
+                            <div class="fb-like"
+                                 data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
                         </li>
                     </b:if>
                 </ul><!-- END postHeaderLine2 -->
@@ -2462,4 +2481,4 @@ text-decoration: none;
 
 </body>
 
-</html> 
+</html>
