@@ -109,7 +109,7 @@ table {
 2. Global
 ------------------------------------------------------*/
 body {
-  font: normal normal 8.333333333333334px 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  font: normal normal 15px / 1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
   background: #fff;
   color: #444;
   -webkit-text-size-adjust: 100%;
@@ -182,7 +182,7 @@ a:hover {
 }
 .button {
   text-transform: uppercase;
-  font: normal normal 8.333333333333334px 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  font: normal normal 15px / 1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
   font-size: 14px;
   font-weight: bold;
   padding: 10px 20px;
@@ -298,7 +298,7 @@ h5 {
   }
 }
 #logos h1 {
-  font: normal normal 8.333333333333334px 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  font: normal normal 15px / 1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 1em;
@@ -350,7 +350,7 @@ h5 {
 }
 .navigation ul li a {
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 11px;
   color: #aaa;
 }
@@ -642,7 +642,7 @@ h5 {
 }
 .comments h4 {
   clear: both;
-  font: normal normal 8.333333333333334px 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  font: normal normal 15px / 1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -694,7 +694,7 @@ h5 {
   text-align: center;
 }
 .sidebar .widget h2 {
-  font: normal normal 8.333333333333334px 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+  font: normal normal 15px / 1.8em 'Helvetica Neue', Helvetica, Arialf, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
   font-weight: bold;
   font-size: 15px;
   text-transform: uppercase;
