@@ -10,7 +10,6 @@
     <!-- = / jQuery /= -->
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'/>
     <!--[if lt IE 9]><script src='http://html5shim.googlecode.com/svn/trunk/html5.js'></script><![endif]-->
-
     <!-- = / Trigger / = -->
     <script>
         function setEqualHeight(columns) {
@@ -1628,7 +1627,11 @@
             });
         };
     })(jQuery);
-    $('a.outbound').gaOutbound();
+    $(window).on('load', function() {
+        setTimeout(function () {
+            $('.blog-title a, .item-title a, .item .Blog .post-body a[href^=http]:not([imageanchor])').gaOutbound();
+        }, 0);
+    });
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document, "script", "twitter-wjs");
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
